@@ -15,6 +15,10 @@ var (
 	initDone bool
 )
 
+const (
+	HttpSpanKey = "span"
+)
+
 func InitTracer(service, tracingEndpoint string) {
 	if initDone {
 		return
