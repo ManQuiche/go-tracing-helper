@@ -13,6 +13,6 @@ func LogTraceID(gtx *gin.Context) {
 
 	span, ok := a.(trace.Span)
 	if ok {
-		log.Printf("traceID: %s", span.SpanContext().TraceID().String())
+		log.Printf("path: %s | traceID: %s", gtx.Request.URL, span.SpanContext().TraceID().String())
 	}
 }
